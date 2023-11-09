@@ -25,5 +25,8 @@ namespace Midterm_CarRental.Data
         [MaxLength(100)]
         public string Address { get; set; }
         public DateTime DateAdded { get; set; }
+
+        // Relationship 1-n with Rent
+        public ICollection<Rent> Rents { get; set; }
     }
 }

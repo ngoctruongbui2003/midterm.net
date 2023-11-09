@@ -30,9 +30,9 @@ namespace Midterm_CarRental
 
             //Application.Run(fLoginForm);
 
-            var fLoginForm = ServiceProvider.GetRequiredService<fCustomer>();
+            //var fLoginForm = ServiceProvider.GetRequiredService<fCustomer>();
 
-            Application.Run(fLoginForm);
+            //Application.Run(fLoginForm);
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }

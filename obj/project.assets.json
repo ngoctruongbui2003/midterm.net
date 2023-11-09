@@ -3887,19 +3887,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FShop\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C# winform\\Midterm_CarRental\\Midterm_CarRental.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
       "projectName": "Midterm_CarRental",
-      "projectPath": "D:\\C# winform\\Midterm_CarRental\\Midterm_CarRental.csproj",
-      "packagesPath": "C:\\Users\\FShop\\.nuget\\packages\\",
-      "outputPath": "D:\\C# winform\\Midterm_CarRental\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\FShop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3971,7 +3971,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
