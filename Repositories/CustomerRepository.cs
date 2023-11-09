@@ -59,6 +59,13 @@ namespace Midterm_CarRental.Repositories
             }
         }
 
+        public CustomerMV GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
         public List<CustomerMV> GetByName(string name)
         {
             try
@@ -75,10 +82,21 @@ namespace Midterm_CarRental.Repositories
                     Address = x.Address,
                     DateAdded = x.DateAdded.ToString("yyyy-MM-dd HH:mm:ss")
                 }).ToList();
-            } catch
+            }
+            catch
             {
                 throw new Exception("Get by name customer not successfully!");
             }
+        }
+
+        public bool Update(CustomerModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

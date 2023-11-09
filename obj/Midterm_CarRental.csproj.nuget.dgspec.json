@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj": {}
+    "C:\\Users\\binbi\\Desktop\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj": {
+    "C:\\Users\\binbi\\Desktop\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
+        "projectUniqueName": "C:\\Users\\binbi\\Desktop\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
         "projectName": "Midterm_CarRental",
-        "projectPath": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\NgocTruongBui\\midterm.net\\obj\\",
+        "projectPath": "C:\\Users\\binbi\\Desktop\\NgocTruongBui\\midterm.net\\Midterm_CarRental.csproj",
+        "packagesPath": "C:\\Users\\binbi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\binbi\\Desktop\\NgocTruongBui\\midterm.net\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\binbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

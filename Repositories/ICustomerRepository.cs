@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Midterm_CarRental.Repositories
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IRepository<CustomerModel, CustomerMV>
     {
-        bool Add(CustomerModel customer);
-        List<CustomerMV> GetAll();
         List<CustomerMV> GetByName(string name);
     }
 }
