@@ -11,12 +11,12 @@ namespace Midterm_CarRental.Data
     {
         [Key]
         [Required]
-        [MaxLength(100)]
+        [MaxLength(20)]
         public string UserName { get; set; }
         [Required]
         [MaxLength(100)]
         public string Password { get; set; }
-        [MaxLength(100)]
+        [MaxLength(20)]
         public string DisplayName { get; set; }
         [Required]
         public int Role { get; set; }

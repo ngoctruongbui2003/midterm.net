@@ -280,3 +280,4 @@ C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\refint
 C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\Midterm_CarRental.pdb
 C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\Midterm_CarRental.genruntimeconfig.cache
 C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\ref\Midterm_CarRental.dll
+D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentAdd.resources

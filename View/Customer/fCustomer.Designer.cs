@@ -60,13 +60,13 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1443, 69);
+            panel1.Size = new Size(1057, 69);
             panel1.TabIndex = 3;
             // 
             // panel3
             // 
             panel3.Controls.Add(btnAdd);
-            panel3.Location = new Point(1331, 15);
+            panel3.Location = new Point(952, 15);
             panel3.Name = "panel3";
             panel3.Size = new Size(100, 36);
             panel3.TabIndex = 4;
@@ -131,7 +131,7 @@
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 69);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1443, 752);
+            panel4.Size = new Size(1057, 753);
             panel4.TabIndex = 4;
             // 
             // dtgvCustomer
@@ -141,14 +141,14 @@
             dtgvCustomer.Name = "dtgvCustomer";
             dtgvCustomer.RowHeadersWidth = 51;
             dtgvCustomer.RowTemplate.Height = 29;
-            dtgvCustomer.Size = new Size(1437, 743);
+            dtgvCustomer.Size = new Size(1049, 743);
             dtgvCustomer.TabIndex = 0;
             // 
             // fCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1443, 821);
+            ClientSize = new Size(1057, 822);
             Controls.Add(panel4);
             Controls.Add(panel1);
             Name = "fCustomer";

@@ -8,10 +8,10 @@ namespace Midterm_CarRental.Repositories
 {
     public interface IRepository <TModel, TViewModel> 
     {
-        List<TViewModel> GetAll();
+        List<TViewModel> GetAll(bool isDesc);
         TViewModel GetById(int id);
         bool Add(TModel model);
-        bool Update(TModel model);
+        void Update(TViewModel model);
         bool Delete(int id);
     }
 }

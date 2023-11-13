@@ -83,7 +83,7 @@ namespace Midterm_CarRental.View
 
         private void btnCarForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fCar(), sender);
+            OpenChildForm(new fCar(Program.ServiceProvider.GetRequiredService<ICarRepository>()), sender);
         }
 
         private void btnCustomerForm_Click(object sender, EventArgs e)

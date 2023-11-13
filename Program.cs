@@ -26,13 +26,13 @@ namespace Midterm_CarRental
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            var fLoginForm = ServiceProvider.GetRequiredService<fLogin>();
-
-            Application.Run(fLoginForm);
-
-            //var fLoginForm = ServiceProvider.GetRequiredService<fCustomer>();
+            //var fLoginForm = ServiceProvider.GetRequiredService<fLogin>();
 
             //Application.Run(fLoginForm);
+
+            var fLoginForm = ServiceProvider.GetRequiredService<fCar>();
+
+            Application.Run(fLoginForm);
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -48,14 +48,18 @@ namespace Midterm_CarRental
                         // config.AddConsole();
                         //etc
                     });
-                    services.AddTransient<IAccountRepository, AccountRepository>();
-                    services.AddTransient<fLogin>();
+                    services.AddScoped<IAccountRepository, AccountRepository>();
+                    services.AddScoped<fLogin>();
 
-                    services.AddTransient<ICustomerRepository, CustomerRepository>();
-                    services.AddTransient<fCustomer>();
+                    // Car
+                    services.AddScoped<ICarRepository, CarRepository>();
+                    services.AddScoped<fCar>();
+                    services.AddScoped<fCarAdd>();
 
-                    services.AddTransient<ICustomerRepository, CustomerRepository>();
-                    services.AddTransient<fCustomerAdd>();
+                    // Customer
+                    services.AddScoped<ICustomerRepository, CustomerRepository>();
+                    services.AddScoped<fCustomer>();
+                    services.AddScoped<fCustomerAdd>();
                 });
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Midterm_CarRental.Data;
-using Midterm_CarRental.Model;
+using Midterm_CarRental.Data.Model;
+using Midterm_CarRental.Data.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace Midterm_CarRental.Repositories
             }
         }
 
-        public List<CustomerMV> GetAll()
+        public List<CustomerMV> GetAll(bool isDesc)
         {
             try
             {
@@ -89,7 +90,7 @@ namespace Midterm_CarRental.Repositories
             }
         }
 
-        public bool Update(CustomerModel model)
+        public void Update(CustomerMV model)
         {
             throw new NotImplementedException();
         }

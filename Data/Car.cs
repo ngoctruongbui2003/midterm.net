@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Midterm_CarRental.Data.Model;
+using Midterm_CarRental.Data.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,10 +14,9 @@ namespace Midterm_CarRental.Data
         [Key]
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
         public string Name { get; set; }
         [MaxLength(100)]
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         [Required]
         [MaxLength(10)]
         public string LicensePlate { get; set; }
@@ -32,5 +33,33 @@ namespace Midterm_CarRental.Data
 
         // Relationship 1-n with Rent
         public ICollection<Rent> Rents { get; set; }
+
+        public Car() { }
+
+        public void SetCarByMV(CarMV model)
+        {
+            Id = model.Id;
+            Name = model.Name;
+            Image = model.Image;
+            LicensePlate = model.LicensePlate;
+            Description = model.Description;
+            Fuel = model.Fuel;
+            Brand = model.Brand;
+            Category = model.Category;
+            Status = model.Status;
+        }
+
+        public void SetCarByModel(CarModel model)
+        {
+            Name = model.Name;
+            Image = model.Image;
+            LicensePlate = model.LicensePlate;
+            Description = model.Description;
+            Fuel = model.Fuel;
+            Brand = model.Brand;
+            Category = model.Category;
+            Status = model.Status;
+            DateAdded = DateTime.Now;
+        }
     }
 }

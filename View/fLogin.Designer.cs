@@ -131,7 +131,7 @@
             Controls.Add(panel2);
             Controls.Add(panel3);
             Name = "fLogin";
-            Text = "Form1";
+            Text = "Đăng nhập";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Midterm_CarRental.Data;
+using Midterm_CarRental.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +16,37 @@ namespace Midterm_CarRental.View.Car
 {
     public partial class fCarAdd : Form
     {
-        public fCarAdd()
+        private readonly ICarRepository _carRepository;
+
+        public fCarAdd(ICarRepository carRepository)
         {
             InitializeComponent();
+            _carRepository = carRepository;
+
+            init();
+        }
+
+        public void init()
+        {
+            SubData subData = new SubData();
+            PopulateComboBox(subData.Brands, cbBrand);
+            PopulateComboBox(subData.Fuels, cbFuel);
+            PopulateComboBox(subData.Categories, cbCategory);
+        }
+
+        private void PopulateComboBox(List<string> data, System.Windows.Forms.ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+
+            foreach (string item in data)
+            {
+                comboBox.Items.Add(item);
+            }
+
+            if (comboBox.Items.Count > 0)
+            {
+                comboBox.SelectedIndex = 0;
+            }
         }
 
         private void tbLicensePlate_TextChanged(object sender, EventArgs e)
@@ -46,17 +76,48 @@ namespace Midterm_CarRental.View.Car
             }
         }
 
-        private void saveImage()
+        private string SaveImage(string sourceFilePath)
         {
-            File.Copy(lbUrl.Text,
-                Path.Combine(@"D:\C# winform\Midterm_CarRental\Resources\Images\",
-                Path.GetFileName(lbUrl.Text)), true);
-            MessageBox.Show("Save image succecffully");
+            string destinationFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Images"));
+            string fileExtension = Path.GetExtension(sourceFilePath);
+            string timestamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+            string newFileName = $"{timestamp}{fileExtension}";
+            string destinationFilePath = Path.Combine(destinationFolder, newFileName);
+
+            File.Copy(sourceFilePath, destinationFilePath, true);
+
+            return newFileName;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            saveImage();
+            string fileName = "";
+
+            if (lbUrl.Text.Trim() == "")
+            {
+                fileName = SaveImage(lbUrl.Text);
+            }
+
+            bool isAdd = _carRepository.Add(new Model.CarModel
+            {
+                Name = tbName.Text,
+                //Image = fileName,
+                LicensePlate = tbLicensePlate.Text,
+                Description = tbDescription.Text,
+                Fuel = cbFuel.SelectedItem.ToString(),
+                Brand = cbBrand.SelectedItem.ToString(),
+                Category = cbCategory.SelectedItem.ToString(),
+                Status = 0
+            });
+
+            MessageBox.Show(isAdd == true ? "Thêm xe thành công" : "Thêm xe thất bại");
+
+            Close();
+        }
+
+        private void fCarAdd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

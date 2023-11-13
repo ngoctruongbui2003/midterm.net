@@ -32,9 +32,9 @@ namespace Midterm_CarRental
             this.Hide();
             fMain.ShowDialog();
 
-            tbUsername.Focus();
             tbUsername.Text = "";
             tbPassword.Text = "";
+            tbUsername.Focus();
 
             this.Show();
         }

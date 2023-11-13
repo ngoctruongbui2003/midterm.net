@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Midterm_CarRental.Model
+namespace Midterm_CarRental.Data.ViewModel
 {
     public class CustomerMV
     {

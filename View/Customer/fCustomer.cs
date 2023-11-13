@@ -28,7 +28,7 @@ namespace Midterm_CarRental.View
         private void LoadCustomer()
         {
             dtgvCustomer.DataSource = null;
-            dtgvCustomer.DataSource = _customerRepository.GetAll();
+            dtgvCustomer.DataSource = _customerRepository.GetAll(true);
             dtgvCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

@@ -44,6 +44,29 @@ namespace Midterm_CarRental.Migrations
                     b.HasKey("UserName");
 
                     b.ToTable("Accounts");
+
+                    b.HasData(
+                        new
+                        {
+                            UserName = "admin",
+                            DisplayName = "Admin",
+                            Password = "admin123",
+                            Role = 1
+                        },
+                        new
+                        {
+                            UserName = "staff1",
+                            DisplayName = "Nhân viên 1",
+                            Password = "staff1",
+                            Role = 0
+                        },
+                        new
+                        {
+                            UserName = "staff2",
+                            DisplayName = "Nhân viên 2",
+                            Password = "staff2",
+                            Role = 0
+                        });
                 });
 
             modelBuilder.Entity("Midterm_CarRental.Data.Car", b =>
@@ -72,10 +95,15 @@ namespace Midterm_CarRental.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("Fuel")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<byte[]>("Image")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("varbinary(100)");
 
                     b.Property<string>("LicensePlate")
                         .IsRequired()
@@ -92,7 +120,7 @@ namespace Midterm_CarRental.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Car");
+                    b.ToTable("Cars");
                 });
 
             modelBuilder.Entity("Midterm_CarRental.Data.Customer", b =>

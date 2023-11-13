@@ -3,24 +3,41 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Midterm_CarRental.Migrations
 {
     /// <inheritdoc />
-    public partial class addTable : Migration
+    public partial class initDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Car",
+                name: "Accounts",
+                columns: table => new
+                {
+                    UserName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DisplayName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Accounts", x => x.UserName);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cars",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Image = table.Column<byte[]>(type: "varbinary(100)", maxLength: 100, nullable: false),
                     LicensePlate = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Fuel = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Brand = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Category = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -28,7 +45,25 @@ namespace Midterm_CarRental.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Car", x => x.Id);
+                    table.PrimaryKey("PK_Cars", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    IdentityCard = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -61,9 +96,9 @@ namespace Midterm_CarRental.Migrations
                 {
                     table.PrimaryKey("PK_Rent", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Rent_Car_CarId",
+                        name: "FK_Rent_Cars_CarId",
                         column: x => x.CarId,
-                        principalTable: "Car",
+                        principalTable: "Cars",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -101,6 +136,16 @@ namespace Midterm_CarRental.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Accounts",
+                columns: new[] { "UserName", "DisplayName", "Password", "Role" },
+                values: new object[,]
+                {
+                    { "admin", "Admin", "admin123", 1 },
+                    { "staff1", "Nhân viên 1", "staff1", 0 },
+                    { "staff2", "Nhân viên 2", "staff2", 0 }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Rent_CarId",
                 table: "Rent",
@@ -126,6 +171,9 @@ namespace Midterm_CarRental.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Accounts");
+
+            migrationBuilder.DropTable(
                 name: "RentDetail");
 
             migrationBuilder.DropTable(
@@ -135,7 +183,10 @@ namespace Midterm_CarRental.Migrations
                 name: "Rent");
 
             migrationBuilder.DropTable(
-                name: "Car");
+                name: "Cars");
+
+            migrationBuilder.DropTable(
+                name: "Customers");
         }
     }
 }
