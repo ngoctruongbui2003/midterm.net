@@ -25,6 +25,9 @@
     <Compile Update="View\Rent\fRent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Rent\fRentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Statistical\fStatistical.cs">
       <SubType>Form</SubType>
     </Compile>

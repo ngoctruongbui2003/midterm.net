@@ -29,77 +29,31 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            tbSearch = new TextBox();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            comboBox1 = new ComboBox();
-            panel2 = new Panel();
-            dataGridView1 = new DataGridView();
             btnAdd = new FontAwesome.Sharp.IconButton();
+            comboBox1 = new ComboBox();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            tbSearch = new TextBox();
+            panel2 = new Panel();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(btnAdd);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(tbSearch);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(0, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(1093, 48);
             panel1.TabIndex = 0;
             // 
-            // tbSearch
-            // 
-            tbSearch.Location = new Point(12, 12);
-            tbSearch.Name = "tbSearch";
-            tbSearch.PlaceholderText = "Search";
-            tbSearch.Size = new Size(171, 23);
-            tbSearch.TabIndex = 0;
-            // 
-            // iconButton1
-            // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(189, 12);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(26, 23);
-            iconButton1.TabIndex = 1;
-            iconButton1.Text = "iconButton1";
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(231, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(dataGridView1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 48);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1093, 661);
-            panel2.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1087, 655);
-            dataGridView1.TabIndex = 0;
-            // 
             // btnAdd
             // 
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAdd.IconChar = FontAwesome.Sharp.IconChar.Add;
             btnAdd.IconColor = Color.Black;
             btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -114,20 +68,65 @@
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(231, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 2;
+            // 
+            // iconButton1
+            // 
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.Location = new Point(189, 12);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(26, 23);
+            iconButton1.TabIndex = 1;
+            iconButton1.Text = "iconButton1";
+            iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // tbSearch
+            // 
+            tbSearch.Location = new Point(12, 12);
+            tbSearch.Name = "tbSearch";
+            tbSearch.PlaceholderText = "Search";
+            tbSearch.Size = new Size(171, 23);
+            tbSearch.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(panel1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1093, 709);
+            panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.BackColor = SystemColors.ActiveCaption;
+            panel3.Location = new Point(0, 57);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1090, 649);
+            panel3.TabIndex = 1;
+            // 
             // fCar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1093, 709);
             Controls.Add(panel2);
-            Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "fCar";
             Text = "CarForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -139,6 +138,6 @@
         private ComboBox comboBox1;
         private Panel panel2;
         private FontAwesome.Sharp.IconButton btnAdd;
-        private DataGridView dataGridView1;
+        private Panel panel3;
     }
 }

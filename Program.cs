@@ -26,13 +26,13 @@ namespace Midterm_CarRental
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            //var fLoginForm = ServiceProvider.GetRequiredService<fLogin>();
-
-            //Application.Run(fLoginForm);
-
-            var fLoginForm = ServiceProvider.GetRequiredService<fCustomer>();
+            var fLoginForm = ServiceProvider.GetRequiredService<fLogin>();
 
             Application.Run(fLoginForm);
+
+            //var fLoginForm = ServiceProvider.GetRequiredService<fCustomer>();
+
+            //Application.Run(fLoginForm);
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
