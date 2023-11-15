@@ -38,11 +38,6 @@
             tbName = new TextBox();
             label2 = new Label();
             panel2 = new Panel();
-            label1 = new Label();
-            panel1 = new Panel();
-            lbUrl = new Label();
-            pbCar = new PictureBox();
-            btnUploadImage = new Button();
             label6 = new Label();
             panel7 = new Panel();
             tbDescription = new TextBox();
@@ -59,8 +54,6 @@
             panel9.SuspendLayout();
             panel6.SuspendLayout();
             panel2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbCar).BeginInit();
             panel7.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -126,7 +119,7 @@
             panel6.Controls.Add(tbLicensePlate);
             panel6.Controls.Add(label5);
             panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 205);
+            panel6.Location = new Point(0, 64);
             panel6.Name = "panel6";
             panel6.Size = new Size(496, 64);
             panel6.TabIndex = 6;
@@ -152,59 +145,10 @@
             panel2.Controls.Add(tbName);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 141);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(496, 64);
             panel2.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Hình xe:";
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(lbUrl);
-            panel1.Controls.Add(pbCar);
-            panel1.Controls.Add(btnUploadImage);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(496, 141);
-            panel1.TabIndex = 5;
-            // 
-            // lbUrl
-            // 
-            lbUrl.AutoSize = true;
-            lbUrl.Location = new Point(105, 23);
-            lbUrl.Name = "lbUrl";
-            lbUrl.Size = new Size(84, 20);
-            lbUrl.TabIndex = 11;
-            lbUrl.Text = "Đường dẫn";
-            // 
-            // pbCar
-            // 
-            pbCar.Location = new Point(248, 7);
-            pbCar.Name = "pbCar";
-            pbCar.Size = new Size(120, 120);
-            pbCar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbCar.TabIndex = 10;
-            pbCar.TabStop = false;
-            // 
-            // btnUploadImage
-            // 
-            btnUploadImage.Location = new Point(105, 55);
-            btnUploadImage.Name = "btnUploadImage";
-            btnUploadImage.Size = new Size(104, 67);
-            btnUploadImage.TabIndex = 9;
-            btnUploadImage.Text = "Tải ảnh";
-            btnUploadImage.UseVisualStyleBackColor = true;
-            btnUploadImage.Click += btnUploadImage_Click;
             // 
             // label6
             // 
@@ -220,7 +164,7 @@
             panel7.Controls.Add(tbDescription);
             panel7.Controls.Add(label6);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 269);
+            panel7.Location = new Point(0, 128);
             panel7.Name = "panel7";
             panel7.Size = new Size(496, 133);
             panel7.TabIndex = 8;
@@ -238,7 +182,7 @@
             panel3.Controls.Add(cbFuel);
             panel3.Controls.Add(label3);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 402);
+            panel3.Location = new Point(0, 261);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
             panel3.Size = new Size(496, 63);
@@ -268,7 +212,7 @@
             panel4.Controls.Add(label7);
             panel4.Controls.Add(panel5);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 465);
+            panel4.Location = new Point(0, 324);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
             panel4.Size = new Size(496, 96);
@@ -306,7 +250,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(13, 19);
+            label4.Location = new Point(14, 24);
             label4.Name = "label4";
             label4.Size = new Size(48, 20);
             label4.TabIndex = 0;
@@ -315,7 +259,7 @@
             // cbBrand
             // 
             cbBrand.FormattingEnabled = true;
-            cbBrand.Location = new Point(106, 15);
+            cbBrand.Location = new Point(105, 21);
             cbBrand.Margin = new Padding(3, 4, 3, 4);
             cbBrand.Name = "cbBrand";
             cbBrand.Size = new Size(138, 28);
@@ -332,7 +276,6 @@
             Controls.Add(panel7);
             Controls.Add(panel6);
             Controls.Add(panel2);
-            Controls.Add(panel1);
             Name = "fCarAdd";
             Text = "fCarAdd";
             Load += fCarAdd_Load;
@@ -342,9 +285,6 @@
             panel6.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbCar).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel3.ResumeLayout(false);
@@ -368,14 +308,9 @@
         private TextBox tbName;
         private Label label2;
         private Panel panel2;
-        private Label label1;
-        private Panel panel1;
         private Label label6;
         private Panel panel7;
         private TextBox tbDescription;
-        private Label lbUrl;
-        private PictureBox pbCar;
-        private Button btnUploadImage;
         private Panel panel3;
         private ComboBox cbFuel;
         private Label label3;

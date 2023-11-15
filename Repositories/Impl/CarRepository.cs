@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Midterm_CarRental.Repositories
+namespace Midterm_CarRental.Repositories.Impl
 {
     public class CarRepository : ICarRepository
     {
@@ -23,7 +23,9 @@ namespace Midterm_CarRental.Repositories
         {
             try
             {
-                _context.Add(new Car(model));
+                Car car = new Car();
+                car.SetCarByModel(model);
+                _context.Add(car);
                 _context.SaveChanges();
 
                 return true;
@@ -60,8 +62,13 @@ namespace Midterm_CarRental.Repositories
             try
             {
                 List<Car> cars = _context.Cars.ToList();
+                CarMV car = new CarMV();
 
-                var res = cars.Select(x => new CarMV(x)).ToList();
+                var res = cars.Select(x =>
+                {
+                    car.SetCarMVByCar(x);
+                    return car;
+                }).ToList();
 
                 if (isDesc)
                 {
@@ -83,7 +90,11 @@ namespace Midterm_CarRental.Repositories
                 var car = _context.Cars.SingleOrDefault(c => c.Id == id);
 
                 if (car == null) return null;
-                return new CarMV(car);
+
+                CarMV res = new CarMV();
+                res.SetCarMVByCar(car);
+
+                return res;
             }
             catch
             {
@@ -102,7 +113,8 @@ namespace Midterm_CarRental.Repositories
                 car.SetCarByMV(model);
                 _context.SaveChanges();
 
-            } catch
+            }
+            catch
             {
                 throw new Exception("Update car not successfully!");
             }

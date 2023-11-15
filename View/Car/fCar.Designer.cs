@@ -35,7 +35,6 @@
             btnAdd = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
             panel4 = new Panel();
-            panel3 = new Panel();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             btnDelete = new FontAwesome.Sharp.IconButton();
@@ -50,10 +49,13 @@
             Category = new DataGridViewTextBoxColumn();
             DateAdded = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
+            panel5 = new Panel();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCar).BeginInit();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -110,10 +112,10 @@
             btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAdd.IconSize = 20;
             btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdd.Location = new Point(29, 14);
+            btnAdd.Location = new Point(9, 9);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(104, 71);
+            btnAdd.Size = new Size(104, 81);
             btnAdd.TabIndex = 3;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
@@ -122,7 +124,6 @@
             // panel2
             // 
             panel2.Controls.Add(panel4);
-            panel2.Controls.Add(panel3);
             panel2.Controls.Add(dgvCar);
             panel2.Controls.Add(panel1);
             panel2.Dock = DockStyle.Fill;
@@ -134,22 +135,11 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(panel5);
             panel4.Location = new Point(3, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(524, 605);
             panel4.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            panel3.Controls.Add(iconButton4);
-            panel3.Controls.Add(iconButton3);
-            panel3.Controls.Add(btnDelete);
-            panel3.Controls.Add(btnAdd);
-            panel3.Location = new Point(533, 512);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(713, 99);
-            panel3.TabIndex = 2;
             // 
             // iconButton4
             // 
@@ -159,10 +149,10 @@
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 20;
             iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(600, 14);
+            iconButton4.Location = new Point(339, 14);
             iconButton4.Margin = new Padding(3, 4, 3, 4);
             iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(104, 71);
+            iconButton4.Size = new Size(0, 71);
             iconButton4.TabIndex = 6;
             iconButton4.Text = "Thêm";
             iconButton4.UseVisualStyleBackColor = true;
@@ -175,10 +165,10 @@
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 20;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(419, 14);
+            iconButton3.Location = new Point(244, 9);
             iconButton3.Margin = new Padding(3, 4, 3, 4);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(104, 71);
+            iconButton3.Size = new Size(104, 81);
             iconButton3.TabIndex = 5;
             iconButton3.Text = "Sửa";
             iconButton3.UseVisualStyleBackColor = true;
@@ -191,10 +181,10 @@
             btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnDelete.IconSize = 20;
             btnDelete.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDelete.Location = new Point(215, 14);
+            btnDelete.Location = new Point(125, 9);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(104, 71);
+            btnDelete.Size = new Size(104, 81);
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = true;
@@ -210,7 +200,7 @@
             dgvCar.RowHeadersWidth = 51;
             dgvCar.RowTemplate.Height = 29;
             dgvCar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCar.Size = new Size(713, 424);
+            dgvCar.Size = new Size(713, 524);
             dgvCar.TabIndex = 1;
             // 
             // ID
@@ -283,6 +273,35 @@
             Status.Name = "Status";
             Status.Width = 125;
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(iconButton1);
+            panel5.Controls.Add(iconButton4);
+            panel5.Controls.Add(btnAdd);
+            panel5.Controls.Add(iconButton3);
+            panel5.Controls.Add(btnDelete);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 509);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(524, 96);
+            panel5.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            iconButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 20;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(364, 9);
+            iconButton1.Margin = new Padding(3, 4, 3, 4);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(104, 81);
+            iconButton1.TabIndex = 7;
+            iconButton1.Text = "Sửa";
+            iconButton1.UseVisualStyleBackColor = true;
+            // 
             // fCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -295,8 +314,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvCar).EndInit();
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -310,7 +330,6 @@
         private DataGridView dgvCar;
         private FontAwesome.Sharp.IconButton btnSearch;
         private Panel panel4;
-        private Panel panel3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton btnDelete;
@@ -324,5 +343,7 @@
         private DataGridViewTextBoxColumn Category;
         private DataGridViewTextBoxColumn DateAdded;
         private DataGridViewTextBoxColumn Status;
+        private Panel panel5;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

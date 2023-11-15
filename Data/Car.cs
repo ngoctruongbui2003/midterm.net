@@ -15,8 +15,6 @@ namespace Midterm_CarRental.Data
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [MaxLength(100)]
-        public byte[] Image { get; set; }
         [Required]
         [MaxLength(10)]
         public string LicensePlate { get; set; }
@@ -40,7 +38,6 @@ namespace Midterm_CarRental.Data
         {
             Id = model.Id;
             Name = model.Name;
-            Image = model.Image;
             LicensePlate = model.LicensePlate;
             Description = model.Description;
             Fuel = model.Fuel;
@@ -52,7 +49,6 @@ namespace Midterm_CarRental.Data
         public void SetCarByModel(CarModel model)
         {
             Name = model.Name;
-            Image = model.Image;
             LicensePlate = model.LicensePlate;
             Description = model.Description;
             Fuel = model.Fuel;

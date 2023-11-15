@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Midterm_CarRental.Repositories
+namespace Midterm_CarRental.Repositories.Impl
 {
     public class CustomerRepository : ICustomerRepository
     {
         private readonly MyDbContext _context;
 
-        public CustomerRepository(MyDbContext context) {
+        public CustomerRepository(MyDbContext context)
+        {
             _context = context;
         }
         public bool Add(CustomerModel customer)
@@ -32,7 +33,8 @@ namespace Midterm_CarRental.Repositories
                 _context.SaveChanges();
 
                 return true;
-            } catch
+            }
+            catch
             {
                 throw new Exception("No add customer successfully");
             }
@@ -54,7 +56,8 @@ namespace Midterm_CarRental.Repositories
                     Address = x.Address,
                     DateAdded = x.DateAdded.ToString("yyyy-MM-dd HH:mm:ss")
                 }).ToList();
-            } catch
+            }
+            catch
             {
                 throw new Exception("Get all customer not successfully!");
             }

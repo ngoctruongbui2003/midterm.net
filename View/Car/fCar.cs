@@ -32,27 +32,23 @@ namespace Midterm_CarRental.View
 
             var cars = _carRepository.GetAll(true);
             string status = "";
-            Image img;
 
             foreach (var car in cars)
             {
-                
+
                 if (car.Status == 0)
                 {
                     status = "Trống";
-                } else
+                }
+                else
                 {
                     status = "Đang thuê";
                 }
-
-
-                MessageBox.Show(Directory.GetCurrentDirectory() + @"..\..\..\Resources\Images");
 
                 dgvCar.Rows.Add(new object[]
                 {
                     car.Id,
                     car.Name,
-                    car.Image,
                     car.LicensePlate,
                     car.Description,
                     car.Fuel,

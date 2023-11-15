@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Midterm_CarRental.Repositories
+namespace Midterm_CarRental.Repositories.Impl
 {
     public class AccountRepository : IAccountRepository
     {

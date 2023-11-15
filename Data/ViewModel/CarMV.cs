@@ -12,7 +12,6 @@ namespace Midterm_CarRental.Data.ViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public byte[] Image { get; set; }
         public string LicensePlate { get; set; }
         public string Description { get; set; }
         public string Fuel { get; set; }
@@ -22,18 +21,18 @@ namespace Midterm_CarRental.Data.ViewModel
         public int Status { get; set; }
 
         public CarMV() { }
-        public CarMV(Car x)
+
+        public void SetCarMVByCar(Car car)
         {
-            Id = x.Id;
-            Name = x.Name;
-            Image = x.Image;
-            LicensePlate = x.LicensePlate;
-            Description = x.Description;
-            Fuel = x.Fuel;
-            Brand = x.Brand;
-            Category = x.Category;
-            DateAdded = x.DateAdded.ToString("yyyy-MM-dd HH:mm:ss");
-            Status = x.Status;
+            Id = car.Id;
+            Name = car.Name;
+            LicensePlate = car.LicensePlate;
+            Description = car.Description;
+            Fuel = car.Fuel;
+            Brand = car.Brand;
+            Category = car.Category;
+            DateAdded = car.DateAdded.ToString("yyyy-MM-dd HH:mm:ss");
+            Status = car.Status;
         }
     }
 }

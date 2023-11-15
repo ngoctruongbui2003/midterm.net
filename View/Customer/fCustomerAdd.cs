@@ -1,4 +1,4 @@
-﻿using Midterm_CarRental.Model;
+﻿using Midterm_CarRental.Data.Model;
 using Midterm_CarRental.Repositories;
 using System;
 using System.Collections.Generic;

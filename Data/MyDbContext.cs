@@ -47,6 +47,78 @@ namespace Midterm_CarRental.Data
                         Role = 0
                     }
                 );
+            modelBuilder.Entity<Feature>().HasData(
+                    new Feature
+                    {
+                        Name = "Bản đồ",
+                        Price = 100000,
+                    },
+                    new Feature
+                    {
+                        Name = "Bluetooth",
+                        Price = 50000,
+                    },
+                    new Feature
+                    {
+                        Name = "Camera lùi",
+                        Price = 110000,
+                    },
+                    new Feature
+                    {
+                        Name = "Camera cập lề",
+                        Price = 110000,
+                    },
+                    new Feature
+                    {
+                        Name = "Camera hành trình",
+                        Price = 400000,
+                    },
+                    new Feature
+                    {
+                        Name = "Cảnh báo tốc độ",
+                        Price = 250000,
+                    },
+                    new Feature
+                    {
+                        Name = "Cảm biến lốp",
+                        Price = 300000,
+                    },
+                    new Feature
+                    {
+                        Name = "Cảm biến va chạm",
+                        Price = 120000,
+                    },
+                    new Feature
+                    {
+                        Name = "Cửa sổ trời",
+                        Price = 1000000,
+                    },
+                    new Feature
+                    {
+                        Name = "Định vị GPS",
+                        Price = 270000,
+                    },
+                    new Feature
+                    {
+                        Name = "Khe cắm USB",
+                        Price = 90000,
+                    },
+                    new Feature
+                    {
+                        Name = "Lốp dự phòng",
+                        Price = 400000,
+                    },
+                    new Feature
+                    {
+                        Name = "Nắm thùng xe bán tải",
+                        Price = 140000,
+                    },
+                    new Feature
+                    {
+                        Name = "Camera 360",
+                        Price = 800000,
+                    }
+                );
         }
     }
 }

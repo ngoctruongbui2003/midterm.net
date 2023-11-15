@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Midterm_CarRental.Data;
 using Midterm_CarRental.Repositories;
+using Midterm_CarRental.Repositories.Impl;
 using Midterm_CarRental.View;
 using Midterm_CarRental.View.Car;
 using Midterm_CarRental.View.Customer;

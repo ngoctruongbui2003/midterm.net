@@ -1,4 +1,5 @@
 ﻿using Midterm_CarRental.Data;
+using Midterm_CarRental.Data.Model;
 using Midterm_CarRental.Repositories;
 using System;
 using System.Collections.Generic;
@@ -23,18 +24,18 @@ namespace Midterm_CarRental.View.Car
             InitializeComponent();
             _carRepository = carRepository;
 
-            init();
+            Init();
         }
 
-        public void init()
+        public void Init()
         {
             SubData subData = new SubData();
-            PopulateComboBox(subData.Brands, cbBrand);
-            PopulateComboBox(subData.Fuels, cbFuel);
-            PopulateComboBox(subData.Categories, cbCategory);
+            UploadComboBox(subData.Brands, cbBrand);
+            UploadComboBox(subData.Fuels, cbFuel);
+            UploadComboBox(subData.Categories, cbCategory);
         }
 
-        private void PopulateComboBox(List<string> data, System.Windows.Forms.ComboBox comboBox)
+        private void UploadComboBox(List<string> data, System.Windows.Forms.ComboBox comboBox)
         {
             comboBox.Items.Clear();
 
@@ -65,40 +66,9 @@ namespace Midterm_CarRental.View.Car
             }
         }
 
-        private void btnUploadImage_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.png; *.jpeg; *.gif; *.bmp;)|*.jpg; *.png; *.jpeg; *.gif; *.bmp;";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                lbUrl.Text = open.FileName;
-                pbCar.Image = new Bitmap(open.FileName);
-            }
-        }
-
-        private string SaveImage(string sourceFilePath)
-        {
-            string destinationFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Images"));
-            string fileExtension = Path.GetExtension(sourceFilePath);
-            string timestamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-            string newFileName = $"{timestamp}{fileExtension}";
-            string destinationFilePath = Path.Combine(destinationFolder, newFileName);
-
-            File.Copy(sourceFilePath, destinationFilePath, true);
-
-            return newFileName;
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string fileName = "";
-
-            if (lbUrl.Text.Trim() == "")
-            {
-                fileName = SaveImage(lbUrl.Text);
-            }
-
-            bool isAdd = _carRepository.Add(new Model.CarModel
+            bool isAdd = _carRepository.Add(new CarModel
             {
                 Name = tbName.Text,
                 //Image = fileName,
