@@ -93,12 +93,19 @@ namespace Midterm_CarRental.View
 
         private void btnRentForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fRent(), sender);
+            OpenChildForm(new fRentAdd(
+                Program.ServiceProvider.GetRequiredService<IFeatureRepository>(),
+                Program.ServiceProvider.GetRequiredService<IRentRepository>(),
+                Program.ServiceProvider.GetRequiredService<ICarRepository>(),
+                Program.ServiceProvider.GetRequiredService<ICustomerRepository>()),
+                sender);
         }
 
         private void btnBillForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fBill(), sender);
+            OpenChildForm(new fRentManager(Program.ServiceProvider.GetRequiredService<IRentRepository>(),
+                Program.ServiceProvider.GetRequiredService<ICarRepository>(),
+                Program.ServiceProvider.GetRequiredService<ICustomerRepository>()), sender);
         }
 
         private void btnStatisticalForm_Click(object sender, EventArgs e)

@@ -20,7 +20,6 @@ D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\refint\Midterm_CarRenta
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.pdb
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.genruntimeconfig.cache
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\ref\Midterm_CarRental.dll
-D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRent.resources
 D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\Azure.Core.dll
 D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\Azure.Identity.dll
 D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
@@ -281,3 +280,11 @@ C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\Midter
 C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\Midterm_CarRental.genruntimeconfig.cache
 C:\Users\binbi\Desktop\NgocTruongBui\midterm.net\obj\Debug\net6.0-windows\ref\Midterm_CarRental.dll
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentAdd.resources
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\EPPlus.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentInfo.resources
+D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentManager.resources

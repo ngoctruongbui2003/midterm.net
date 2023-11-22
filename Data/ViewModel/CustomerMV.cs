@@ -16,5 +16,17 @@ namespace Midterm_CarRental.Data.ViewModel
         public string IdentityCard { get; set; }
         public string Address { get; set; }
         public string DateAdded { get; set; }
+
+        public CustomerMV() { }
+        public void SetCustomerMVByCustomer(Customer customer)
+        {
+            Id = customer.Id;
+            Name = customer.Name;
+            Gender = customer.Gender;
+            Phone = customer.Phone;
+            IdentityCard = customer.IdentityCard;
+            Address = customer.Address;
+            DateAdded = customer.DateAdded.ToString("yyyy-MM-dd HH:mm:ss");
+        }
     }
 }

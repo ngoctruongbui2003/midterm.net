@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Midterm_CarRental.Data.Model;
+using Midterm_CarRental.Data.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -28,5 +30,23 @@ namespace Midterm_CarRental.Data
 
         // Relationship 1-n with Rent
         public ICollection<Rent> Rents { get; set; }
+
+        public void SetCustomerByMV(CustomerMV customer) {
+            Id = customer.Id;
+            Name = customer.Name;
+            Gender = customer.Gender;
+            Phone = customer.Phone;
+            IdentityCard = customer.IdentityCard;
+            Address = customer.Address;
+        }
+
+        public void SetCustomerByModel(CustomerModel customer) {
+            Name = customer.Name;
+            Gender = customer.Gender;
+            Phone = customer.Phone;
+            IdentityCard = customer.IdentityCard;
+            Address = customer.Address;
+            DateAdded = DateTime.Now;
+        }
     }
 }

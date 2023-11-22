@@ -10,7 +10,7 @@ namespace Midterm_CarRental.Repositories
     {
         List<TViewModel> GetAll(bool isDesc);
         TViewModel GetById(int id);
-        bool Add(TModel model);
+        int Add(TModel model);
         void Update(TViewModel model);
         bool Delete(int id);
     }

@@ -22,10 +22,13 @@
     <Compile Update="View\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Rent\fRent.cs">
+    <Compile Update="View\Rent\fRentAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Rent\fRentAdd.cs">
+    <Compile Update="View\Rent\fRentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Rent\fRentManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Statistical\fStatistical.cs">

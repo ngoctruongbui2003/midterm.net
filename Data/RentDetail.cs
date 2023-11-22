@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Midterm_CarRental.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,5 +21,12 @@ namespace Midterm_CarRental.Data
         // Relationship n-1 with Feature
         public int FeatureId { get; set; }
         public Feature Features { get; set; }
+
+        public void SetRentDetailByModel(RentDetailModel model)
+        {
+            Price = model.Price;
+            RentId = model.RentId;
+            FeatureId = model.FeatureId;
+        }
     }
 }

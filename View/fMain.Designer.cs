@@ -231,6 +231,7 @@
             // 
             // lbHello
             // 
+            lbHello.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lbHello.AutoSize = true;
             lbHello.ForeColor = Color.Fuchsia;
             lbHello.Location = new Point(831, 32);

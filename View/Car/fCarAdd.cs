@@ -18,18 +18,23 @@ namespace Midterm_CarRental.View.Car
     public partial class fCarAdd : Form
     {
         private readonly ICarRepository _carRepository;
+        private ComboBoxData dataCb = new ComboBoxData();
 
         public fCarAdd(ICarRepository carRepository)
         {
             InitializeComponent();
             _carRepository = carRepository;
+        }
 
+        private void fCarAdd_Load(object sender, EventArgs e)
+        {
+            tbName.Focus();
             Init();
         }
 
         public void Init()
         {
-            SubData subData = new SubData();
+            ComboBoxData subData = new ComboBoxData();
             UploadComboBox(subData.Brands, cbBrand);
             UploadComboBox(subData.Fuels, cbFuel);
             UploadComboBox(subData.Categories, cbCategory);
@@ -52,6 +57,8 @@ namespace Midterm_CarRental.View.Car
 
         private void tbLicensePlate_TextChanged(object sender, EventArgs e)
         {
+
+            // 81A-123456
             string inputText = tbLicensePlate.Text;
 
             if (inputText.Length == 4)
@@ -68,26 +75,53 @@ namespace Midterm_CarRental.View.Car
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            bool isAdd = _carRepository.Add(new CarModel
+            // Check condition when enter invalid
+            string name = tbName.Text.Trim();
+            string licensePlate = tbLicensePlate.Text.Trim();
+            string price = tbPrice.Text.Trim();
+
+            string error = "";
+            bool isError = false;
+
+            if (name == "")
             {
-                Name = tbName.Text,
-                //Image = fileName,
-                LicensePlate = tbLicensePlate.Text,
-                Description = tbDescription.Text,
+                error += "- Bạn chưa nhập tên\n";
+                isError = true;
+            }
+            if (licensePlate == "")
+            {
+                error += "- Bạn chưa nhập biển số\n";
+                isError = true;
+            }
+            if (price == "")
+            {
+                error += "- Bạn chưa nhập giá tiền cho thuê\n";
+                isError = true;
+            }
+
+            if (isError)
+            {
+                MessageBox.Show(error, "Thông báo");
+                return;
+            }
+
+            // Add car 
+            int isAdd = _carRepository.Add(new CarModel
+            {
+                Name = name,
+                LicensePlate = licensePlate,
+                Price = long.Parse(price),
+                Description = tbDescription.Text.Trim(),
                 Fuel = cbFuel.SelectedItem.ToString(),
                 Brand = cbBrand.SelectedItem.ToString(),
                 Category = cbCategory.SelectedItem.ToString(),
-                Status = 0
+                Status = dataCb.StatusCar[0]
             });
 
-            MessageBox.Show(isAdd == true ? "Thêm xe thành công" : "Thêm xe thất bại");
+            MessageBox.Show(isAdd != -1 ? "Thêm xe thành công" : "Thêm xe thất bại");
 
+            // Close
             Close();
-        }
-
-        private void fCarAdd_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

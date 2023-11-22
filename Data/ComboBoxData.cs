@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Midterm_CarRental.Data
 {
-    public class SubData
+    public class ComboBoxData
     {
         public List<string> Brands = new List<string>
         {
@@ -41,6 +41,31 @@ namespace Midterm_CarRental.Data
             "7 chỗ (CUV Gầm cao)",
             "7 chỗ (MPV Gầm thấp)",
             "Bán tải",
+        };
+        public List<string> SearchCar = new List<string>
+        {
+            "Tên xe",
+            "Hãng xe",
+            "Loại xe"
+        };
+
+        public List<string> SearchCustomer = new List<string>
+        {
+            "Tên khách hàng",
+            "Số điện thoại",
+            "CCCD"
+        };
+
+        public List<string> StatusCar = new List<string>
+        {
+            "Trống",
+            "Đang cho thuê"
+        };
+
+        public List<string> StatusRent = new List<string>
+        {
+            "Đang thuê",
+            "Đã thanh toán",
         };
     }
 }

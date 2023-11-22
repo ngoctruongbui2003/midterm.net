@@ -38,26 +38,30 @@
             tbName = new TextBox();
             label2 = new Label();
             panel2 = new Panel();
-            label6 = new Label();
-            panel7 = new Panel();
-            tbDescription = new TextBox();
-            panel3 = new Panel();
-            cbFuel = new ComboBox();
-            label3 = new Label();
+            panel1 = new Panel();
             panel4 = new Panel();
             cbCategory = new ComboBox();
             label7 = new Label();
             panel5 = new Panel();
             label4 = new Label();
             cbBrand = new ComboBox();
+            panel3 = new Panel();
+            cbFuel = new ComboBox();
+            label3 = new Label();
+            panel7 = new Panel();
+            tbDescription = new TextBox();
+            label6 = new Label();
+            tbPrice = new TextBox();
+            label1 = new Label();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
             panel6.SuspendLayout();
             panel2.SuspendLayout();
-            panel7.SuspendLayout();
-            panel3.SuspendLayout();
+            panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel3.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // button2
@@ -102,7 +106,7 @@
             tbLicensePlate.Location = new Point(105, 20);
             tbLicensePlate.Name = "tbLicensePlate";
             tbLicensePlate.Size = new Size(263, 27);
-            tbLicensePlate.TabIndex = 5;
+            tbLicensePlate.TabIndex = 2;
             tbLicensePlate.TextChanged += tbLicensePlate_TextChanged;
             // 
             // label5
@@ -129,7 +133,7 @@
             tbName.Location = new Point(105, 20);
             tbName.Name = "tbName";
             tbName.Size = new Size(263, 27);
-            tbName.TabIndex = 2;
+            tbName.TabIndex = 1;
             // 
             // label2
             // 
@@ -150,61 +154,15 @@
             panel2.Size = new Size(496, 64);
             panel2.TabIndex = 7;
             // 
-            // label6
+            // panel1
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(14, 23);
-            label6.Name = "label6";
-            label6.Size = new Size(51, 20);
-            label6.TabIndex = 0;
-            label6.Text = "Mô tả:";
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(tbDescription);
-            panel7.Controls.Add(label6);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 128);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(496, 133);
-            panel7.TabIndex = 8;
-            // 
-            // tbDescription
-            // 
-            tbDescription.Location = new Point(105, 20);
-            tbDescription.Multiline = true;
-            tbDescription.Name = "tbDescription";
-            tbDescription.Size = new Size(263, 105);
-            tbDescription.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(cbFuel);
-            panel3.Controls.Add(label3);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 261);
-            panel3.Margin = new Padding(3, 4, 3, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(496, 63);
-            panel3.TabIndex = 11;
-            // 
-            // cbFuel
-            // 
-            cbFuel.FormattingEnabled = true;
-            cbFuel.Location = new Point(106, 17);
-            cbFuel.Margin = new Padding(3, 4, 3, 4);
-            cbFuel.Name = "cbFuel";
-            cbFuel.Size = new Size(263, 28);
-            cbFuel.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(13, 21);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Nhiên liệu:";
+            panel1.Controls.Add(tbPrice);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 128);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(496, 70);
+            panel1.TabIndex = 11;
             // 
             // panel4
             // 
@@ -212,11 +170,11 @@
             panel4.Controls.Add(label7);
             panel4.Controls.Add(panel5);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 324);
+            panel4.Location = new Point(0, 394);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
             panel4.Size = new Size(496, 96);
-            panel4.TabIndex = 12;
+            panel4.TabIndex = 15;
             // 
             // cbCategory
             // 
@@ -225,7 +183,7 @@
             cbCategory.Margin = new Padding(3, 4, 3, 4);
             cbCategory.Name = "cbCategory";
             cbCategory.Size = new Size(138, 28);
-            cbCategory.TabIndex = 2;
+            cbCategory.TabIndex = 6;
             // 
             // label7
             // 
@@ -263,7 +221,79 @@
             cbBrand.Margin = new Padding(3, 4, 3, 4);
             cbBrand.Name = "cbBrand";
             cbBrand.Size = new Size(138, 28);
-            cbBrand.TabIndex = 1;
+            cbBrand.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(cbFuel);
+            panel3.Controls.Add(label3);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 331);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(496, 63);
+            panel3.TabIndex = 14;
+            // 
+            // cbFuel
+            // 
+            cbFuel.FormattingEnabled = true;
+            cbFuel.Location = new Point(106, 17);
+            cbFuel.Margin = new Padding(3, 4, 3, 4);
+            cbFuel.Name = "cbFuel";
+            cbFuel.Size = new Size(263, 28);
+            cbFuel.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(13, 21);
+            label3.Name = "label3";
+            label3.Size = new Size(79, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Nhiên liệu:";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(tbDescription);
+            panel7.Controls.Add(label6);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 198);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(496, 133);
+            panel7.TabIndex = 13;
+            // 
+            // tbDescription
+            // 
+            tbDescription.Location = new Point(105, 20);
+            tbDescription.Multiline = true;
+            tbDescription.Name = "tbDescription";
+            tbDescription.Size = new Size(263, 105);
+            tbDescription.TabIndex = 3;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(14, 23);
+            label6.Name = "label6";
+            label6.Size = new Size(51, 20);
+            label6.TabIndex = 0;
+            label6.Text = "Mô tả:";
+            // 
+            // tbPrice
+            // 
+            tbPrice.Location = new Point(105, 19);
+            tbPrice.Name = "tbPrice";
+            tbPrice.Size = new Size(263, 27);
+            tbPrice.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Giá tiền:";
             // 
             // fCarAdd
             // 
@@ -272,8 +302,9 @@
             ClientSize = new Size(496, 648);
             Controls.Add(panel4);
             Controls.Add(panel3);
-            Controls.Add(panel8);
             Controls.Add(panel7);
+            Controls.Add(panel1);
+            Controls.Add(panel8);
             Controls.Add(panel6);
             Controls.Add(panel2);
             Name = "fCarAdd";
@@ -285,14 +316,16 @@
             panel6.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -308,17 +341,20 @@
         private TextBox tbName;
         private Label label2;
         private Panel panel2;
-        private Label label6;
-        private Panel panel7;
-        private TextBox tbDescription;
-        private Panel panel3;
-        private ComboBox cbFuel;
-        private Label label3;
+        private Panel panel1;
         private Panel panel4;
-        private Label label4;
-        private ComboBox cbBrand;
         private ComboBox cbCategory;
         private Label label7;
         private Panel panel5;
+        private Label label4;
+        private ComboBox cbBrand;
+        private Panel panel3;
+        private ComboBox cbFuel;
+        private Label label3;
+        private Panel panel7;
+        private TextBox tbDescription;
+        private Label label6;
+        private TextBox tbPrice;
+        private Label label1;
     }
 }

@@ -11,5 +11,8 @@ namespace Midterm_CarRental.Repositories
     public interface ICustomerRepository : IRepository<CustomerModel, CustomerMV>
     {
         List<CustomerMV> GetByName(string name);
+        List<CustomerMV> GetByPhone(string name);
+        List<CustomerMV> GetByIdentityCard(string name);
+        
     }
 }

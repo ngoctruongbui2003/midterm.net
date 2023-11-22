@@ -18,6 +18,8 @@ namespace Midterm_CarRental.Data
         [Required]
         [MaxLength(10)]
         public string LicensePlate { get; set; }
+        [Required]
+        public long Price { get; set; }
         [MaxLength(100)]
         public string Description { get; set; }
         [MaxLength(20)]
@@ -27,7 +29,7 @@ namespace Midterm_CarRental.Data
         [MaxLength(20)]
         public string Category { get; set; }
         public DateTime DateAdded { get; set; }
-        public int Status { get; set; }
+        public string Status { get; set; }
 
         // Relationship 1-n with Rent
         public ICollection<Rent> Rents { get; set; }
@@ -39,17 +41,18 @@ namespace Midterm_CarRental.Data
             Id = model.Id;
             Name = model.Name;
             LicensePlate = model.LicensePlate;
+            Price = model.Price;
             Description = model.Description;
             Fuel = model.Fuel;
             Brand = model.Brand;
             Category = model.Category;
-            Status = model.Status;
         }
 
         public void SetCarByModel(CarModel model)
         {
             Name = model.Name;
             LicensePlate = model.LicensePlate;
+            Price = model.Price;
             Description = model.Description;
             Fuel = model.Fuel;
             Brand = model.Brand;

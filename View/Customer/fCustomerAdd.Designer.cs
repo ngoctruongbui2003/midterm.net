@@ -101,6 +101,7 @@
             tbIdentityCard.Name = "tbIdentityCard";
             tbIdentityCard.Size = new Size(510, 27);
             tbIdentityCard.TabIndex = 2;
+            tbIdentityCard.KeyPress += tbIdentityCard_KeyPress;
             // 
             // label2
             // 
@@ -136,6 +137,8 @@
             tbPhone.Name = "tbPhone";
             tbPhone.Size = new Size(220, 27);
             tbPhone.TabIndex = 4;
+            tbPhone.TextChanged += tbPhone_TextChanged;
+            tbPhone.KeyPress += tbPhone_KeyPress;
             // 
             // label4
             // 
@@ -264,6 +267,7 @@
             Controls.Add(panel1);
             Name = "fCustomerAdd";
             Text = "fCustomerAdd";
+            Load += fCustomerAdd_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

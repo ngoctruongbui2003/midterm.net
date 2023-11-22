@@ -13,12 +13,13 @@ namespace Midterm_CarRental.Data.ViewModel
         public int Id { get; set; }
         public string Name { get; set; }
         public string LicensePlate { get; set; }
+        public long Price { get; set; }
         public string Description { get; set; }
         public string Fuel { get; set; }
         public string Brand { get; set; }
         public string Category { get; set; }
         public string DateAdded { get; set; }
-        public int Status { get; set; }
+        public string Status { get; set; }
 
         public CarMV() { }
 
@@ -27,6 +28,7 @@ namespace Midterm_CarRental.Data.ViewModel
             Id = car.Id;
             Name = car.Name;
             LicensePlate = car.LicensePlate;
+            Price = car.Price;
             Description = car.Description;
             Fuel = car.Fuel;
             Brand = car.Brand;
