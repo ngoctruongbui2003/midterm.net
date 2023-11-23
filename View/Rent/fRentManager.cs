@@ -134,6 +134,8 @@ namespace Midterm_CarRental.View.Rent
 
         private void dgvRent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvRent.CurrentCell == null || dgvRent.CurrentCell.Value == null) return;
+
             index = e.RowIndex;
             int id = Int32.Parse(dgvRent.Rows[index].Cells[0].Value.ToString());
 

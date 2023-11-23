@@ -1,4 +1,5 @@
-﻿using Midterm_CarRental.Data.Model;
+﻿using Midterm_CarRental.Data;
+using Midterm_CarRental.Data.Model;
 using Midterm_CarRental.Data.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,6 @@ namespace Midterm_CarRental.Repositories
     {
         bool ChangeStatus(int id);
         long GetRemainingPriceById(int id);
+        List<StatisticalClass> GetStatisticalToDate(DateTime dateStart, DateTime dateEnd);
     }
 }

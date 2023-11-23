@@ -110,7 +110,7 @@ namespace Midterm_CarRental.View
 
         private void btnStatisticalForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new fStatistical(), sender);
+            OpenChildForm(new fStatistical(Program.ServiceProvider.GetRequiredService<IRentRepository>()), sender);
         }
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)

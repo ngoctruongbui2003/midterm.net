@@ -288,3 +288,6 @@ D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\System.Security.Cryptog
 D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentInfo.resources
 D:\C# winform\Midterm_CarRental\obj\Debug\net6.0-windows\Midterm_CarRental.View.Rent.fRentManager.resources
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\LiveCharts.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\LiveCharts.WinForms.dll
+D:\C# winform\Midterm_CarRental\bin\Debug\net6.0-windows\LiveCharts.Wpf.dll

@@ -198,5 +198,28 @@ namespace Midterm_CarRental.Repositories.Impl
         {
             throw new NotImplementedException();
         }
+
+        public List<StatisticalClass> GetStatisticalToDate(DateTime dateStart, DateTime dateEnd)
+        {
+
+            var x = _context.Rents
+                        .Where(r => r.DateReturn.Date >= dateStart && r.DateReturn.Date < dateEnd);
+            var y = x.Include(r => r.Car);
+            var z = y.GroupBy(r => r.Car.Brand);
+
+            return _context.Rents
+                        .Where(r => r.DateReturn.Date >= dateStart && r.DateReturn.Date < dateEnd && r.Status.Equals(data.StatusRent[1]))
+                        .Include(r => r.Car).Include(r => r.RentDetails)
+                        .ToList()
+                        .GroupBy(r => new { r.Car.Brand })
+                        .Select(r => new StatisticalClass()
+                        {
+                            BrandCar = r.Key.Brand,
+                            Revenue = r.Sum(rent => rent.GetTotalPrice()),
+                            Quantity = r.Count()
+                        })
+                        .ToList();
+
+        }
     }
 }

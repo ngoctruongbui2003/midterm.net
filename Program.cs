@@ -10,6 +10,7 @@ using Midterm_CarRental.View;
 using Midterm_CarRental.View.Car;
 using Midterm_CarRental.View.Customer;
 using Midterm_CarRental.View.Rent;
+using Midterm_CarRental.View.Statistical;
 using System.Data;
 
 namespace Midterm_CarRental
@@ -73,6 +74,7 @@ namespace Midterm_CarRental
                     services.AddScoped<fRentAdd>();
                     services.AddScoped<fRentInfo>();
                     services.AddScoped<fRentManager>();
+                    services.AddScoped<fStatistical>();
 
 
                     // RentDetail
