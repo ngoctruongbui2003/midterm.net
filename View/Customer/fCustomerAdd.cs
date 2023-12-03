@@ -47,7 +47,8 @@ namespace Midterm_CarRental.View.Customer
             {
                 error += "- Chưa nhập số điện thoại\n";
                 isError = true;
-            } else if (phone.Length > 10)
+            }
+            else if (phone.Length > 10)
             {
                 error += "- Số điện thoại quá 10 số";
                 isError = true;
@@ -56,7 +57,8 @@ namespace Midterm_CarRental.View.Customer
             {
                 error += "- Chưa nhập số căn cước công dân\n";
                 isError = true;
-            } else if (identityCard.Length > 20)
+            }
+            else if (identityCard.Length > 20)
             {
                 error += "- Số căn cước công dân quá 20 số";
                 isError = true;

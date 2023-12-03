@@ -266,7 +266,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "fCustomerAdd";
-            Text = "fCustomerAdd";
+            Text = "Thêm khách hàng";
             Load += fCustomerAdd_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -60,7 +60,7 @@ namespace Midterm_CarRental.View.Rent
 
         private void LoadData()
         {
-            
+
 
             tbNameCustomer.Text = rentMV.CustomerName.ToString();
             tbPhoneCustomer.Text = rentMV.CustomerPhone.ToString();
@@ -105,7 +105,8 @@ namespace Midterm_CarRental.View.Rent
             if (tbPrepaidPrice.Text == "")
             {
                 tbPrepaidPrice.Text = 0 + "";
-            } else
+            }
+            else
             {
                 moneyTotal -= rentMV.PrepaidPrice;
             }
@@ -133,9 +134,8 @@ namespace Midterm_CarRental.View.Rent
             if (remainMoney < 0)
             {
                 MessageBox.Show("Số tiền trả trước nhập chưa đúng");
+                return;
             }
-
-            
 
             int idRent = _rentRepository.Add(new RentModel()
             {
@@ -154,7 +154,7 @@ namespace Midterm_CarRental.View.Rent
                 return;
             }
 
-            foreach(FeatureMV featureMV in rentMV.Features)
+            foreach (FeatureMV featureMV in rentMV.Features)
             {
                 int idRentDetail = _rentDetailRepository.Add(new RentDetailModel()
                 {

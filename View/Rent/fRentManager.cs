@@ -126,6 +126,12 @@ namespace Midterm_CarRental.View.Rent
 
         private void btnRentInfo_Click(object sender, EventArgs e)
         {
+            if(rentChoosed == null)
+            {
+                MessageBox.Show("Chưa chọn hóa đơn để xem");
+                return;
+            }
+
             Form f = new fRentInfo(rentChoosed, _rentRepository);
             f.ShowDialog();
             f = null;

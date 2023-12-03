@@ -39,6 +39,8 @@
             label2 = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
+            tbPrice = new TextBox();
+            label1 = new Label();
             panel4 = new Panel();
             cbCategory = new ComboBox();
             label7 = new Label();
@@ -51,8 +53,6 @@
             panel7 = new Panel();
             tbDescription = new TextBox();
             label6 = new Label();
-            tbPrice = new TextBox();
-            label1 = new Label();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
             panel6.SuspendLayout();
@@ -163,6 +163,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(496, 70);
             panel1.TabIndex = 11;
+            // 
+            // tbPrice
+            // 
+            tbPrice.Location = new Point(105, 19);
+            tbPrice.Name = "tbPrice";
+            tbPrice.Size = new Size(263, 27);
+            tbPrice.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(63, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Giá tiền:";
             // 
             // panel4
             // 
@@ -279,22 +295,6 @@
             label6.TabIndex = 0;
             label6.Text = "Mô tả:";
             // 
-            // tbPrice
-            // 
-            tbPrice.Location = new Point(105, 19);
-            tbPrice.Name = "tbPrice";
-            tbPrice.Size = new Size(263, 27);
-            tbPrice.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 20);
-            label1.TabIndex = 3;
-            label1.Text = "Giá tiền:";
-            // 
             // fCarAdd
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -308,7 +308,7 @@
             Controls.Add(panel6);
             Controls.Add(panel2);
             Name = "fCarAdd";
-            Text = "fCarAdd";
+            Text = "Thêm xe";
             Load += fCarAdd_Load;
             panel8.ResumeLayout(false);
             panel9.ResumeLayout(false);
